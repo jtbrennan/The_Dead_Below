@@ -47,10 +47,8 @@ def farm_house():
     answer = input(">")
 
     if answer == "1":
-        # lead him to the hardware_store()
-        farm_house_kitchen()
+        game_over("The Dead thought there would be food in the Kitchen aswell...")
     elif answer == "2":
-        # the player is dead, call game_over() with "reason"
         farm_house_bedroom()
             
     else:
@@ -85,11 +83,10 @@ def hardware_store():
     answer = input(">")
 
     if answer == "1":
-        # lead him to the hardware_store()
         grocery_store()
     elif answer == "2":
-        # the player is dead, call game_over() with "reason"
-        side_road()
+
+        game_over("The Fire exit is blocked. You try to pry open the door with your new hammer and the handle breaks. The Dead ones scattered on the street hear you...")
     else:
         # game_over() with "reason"
         game_over("Go and learn how to type a number.")
@@ -141,7 +138,7 @@ def town_ravine():
     answer = input(">")
 
     if answer == "1":
-        # lead him to the hardware_store()
+
         farm_house()
     elif answer == "2":
         # the player is dead, call game_over() with "reason"
